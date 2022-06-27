@@ -1,0 +1,439 @@
+.inquiry {
+    background-color: rgba($color-primary, 0.05);
+    padding-top: 30px;
+
+    @include mq("phablet") {
+        padding-top: 20px;
+    }
+    @include mq("bootstrap-lg") {
+        padding-top: 95px;
+    }
+}
+
+.inquiry-form {
+    padding: 0 0 65px 0;
+    font-weight: 700;
+
+    @include mq("tablet") {
+        padding: 0 0 90px 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @include mq("bootstrap-lg") {
+        width: 80%;
+        padding: 0 0 132px 0;
+    }
+
+    @include mq("desktop") {
+        width: 65%;
+        margin: 0 auto;
+        padding: 0 0 132px 0;
+    }
+    @include mq("desktop-lg") {
+        width: 72.26%;
+        margin: 0 auto;
+        padding: 0 0 132px 0;
+    }
+
+    &--confirmation {
+        .inquiry-form__label,
+        .inquiry-form__value {
+            color: $color-black !important;
+        }
+
+        padding-top: 70px;
+
+        @include mq("bootstrap-lg") {
+            width: 80%;
+        }
+    }
+
+    &__title {
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 700;
+        text-align: center;
+        color: $color-black;
+        margin: 10px 0 30px;
+
+        @include mq("tablet") {
+            line-height: 1.8;
+            // margin:  0 29px;
+            font-size: 18px;
+        }
+        @include mq("bootstrap-lg") {
+            margin: 31px 0 48px;
+        }
+
+        & span {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 2.1;
+            @include mq("tablet") {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .form-group {
+        // margin-bottom: 25px;
+        &.row {
+            margin: 0 0 25px 0;
+            > [class^="col-"] {
+                padding: 0 10px;
+            }
+
+            @include mq("tablet") {
+                margin: 0 -10px 43px -10px;
+            }
+        }
+
+        @include mq("tablet") {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__label-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        @include mq("tablet") {
+            // justify-content: flex-end;
+            margin-bottom: 15px;
+            height: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__label,
+    &__value {
+        font-size: 16px;
+        color: $color-black;
+        margin-bottom: 0;
+
+        @include mq("tablet") {
+            font-size: 16px;
+        }
+
+        @include mq("bootstrap-lg") {
+            font-size: 18px;
+        }
+    }
+
+    &__label {
+        padding-left: 0;
+
+        @include mq("bootstrap-lg") {
+            // padding-left: 46px;
+        }
+    }
+
+    &__value {
+        font-weight: 400;
+    }
+
+    &__state {
+        font-size: 14px;
+        height: 24px;
+        line-height: 1.7;
+        line-height: 24px;
+        padding: 0 6px;
+        background: $color-red;
+        color: $color-white;
+
+        @include mq("tablet") {
+            font-size: 16px;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 8px;
+            margin-left: 20px;
+        }
+
+        @include mq("bootstrap-lg") {
+            font-size: 16px;
+            margin-left: 0;
+        }
+
+        &--any {
+            background: $color-white;
+            color: $color-black;
+            border: 1px solid $color-gray-dark--2;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+        }
+    }
+
+    .form-control {
+        height: 50px;
+        border-radius: 0;
+        border: solid 2px $color-gray-dark--2;
+        font-family: $font-primary;
+        font-size: 17px;
+        font-weight: 400;
+        box-shadow: inset 0 1px #afafaf;
+
+        &:focus {
+            box-shadow: 0 0 0 1px rgba($color-black, 0.4);
+        }
+
+        &::placeholder {
+            color: $color-gray-dark--2;
+        }
+    }
+
+    &__radio-wrapper {
+        .custom-control {
+            padding-left: 44px;
+
+            @include mq("phablet") {
+                padding-left: 2.8rem;
+            }
+
+            @include mq("tablet") {
+                padding-left: 2.8rem;
+            }
+
+            @include mq("bootstrap-lg") {
+                padding-left: 4rem;
+            }
+
+            &:first-child {
+                padding-left: 3.2rem;
+            }
+        }
+
+        .custom-control-label {
+            font-size: 18px;
+            color: $color-black;
+            display: block;
+            font-weight: 400;
+
+            &:before,
+            &:after {
+                left: -1.8rem;
+                top: 0.6rem;
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+
+        .custom-control-label::before {
+            border: 2px solid $color-gray-dark--2;
+        }
+
+        .custom-control-input:focus:not(:checked)
+            ~ .custom-control-label::before {
+            border-color: $color-white;
+        }
+
+        .custom-control-input:focus ~ .custom-control-label::before {
+            box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.3);
+        }
+
+        .custom-control-input:checked ~ .custom-control-label::before {
+            border-color: $color-white;
+            background-color: $color-primary;
+        }
+
+        //reveal if active
+        .reveal-if-active {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transform: scale(0.8);
+            transition: 0.5s;
+        }
+
+        .custom-control-input#radio1:checked ~ .reveal-if-active {
+            opacity: 1;
+            max-height: 100px;
+            overflow: visible;
+            transform: scale(1);
+            margin-top: 10px;
+        }
+    }
+
+    .custom-select {
+        background: url("../img/arrow-down.svg") no-repeat right 0.75rem center;
+        background-size: 22px 22px;
+    }
+
+    textarea.form-control {
+        height: 250px;
+        resize: none;
+    }
+
+    &__btn-wrapper {
+        margin-top: 45px;
+        width: 100%;
+        // text-align: center;
+
+        @include mq("tablet") {
+            margin-top: 60px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        text-align: center;
+        font-size: 21px;
+        font-weight: 700;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        background: linear-gradient(
+            180deg,
+            rgba(251, 176, 59, 1) 0%,
+            rgba(241, 90, 36, 1) 100%
+        );
+        padding: 12px 15px;
+        border-radius: 100px;
+        border: 4px solid #e26507;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        color: $color-white;
+        transition: all 0.2s ease-in;
+
+        @include mq("phablet") {
+            font-size: 24px;
+            width: 370px;
+            margin: 0 auto;
+            // margin-left: 12px;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $color-white;
+            @include mq("tablet") {
+                background: linear-gradient(180deg, #e26507 40%, #e26507 100%);
+                border: 4px solid #e26507;
+            }
+        }
+    }
+
+    .privacy-group {
+        max-width: 730px;
+        margin: 0 auto;
+    }
+
+    .inquiry-form__privacy {
+        background-color: $color-white;
+        font-weight: 500;
+        padding: 25px 20px;
+        max-height: 200px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            padding-bottom: 30px;
+        }
+
+        p,
+        li,
+        h5 {
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.8;
+            margin: 25px 0 10px;
+        }
+
+        h5 {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        li {
+            text-indent: -10px;
+        }
+
+        p,
+        li {
+            padding-left: 15px;
+        }
+    }
+
+    &__radio-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+// send.php
+.form-sended {
+    &__wrapper {
+        min-height: 55vh;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 1.7;
+
+        @include mq("tablet") {
+            font-size: 20px;
+        }
+    }
+
+    .heading__title {
+        margin-top: 35px;
+    }
+}
+
+.confirmation-page,
+.form-sended {
+    background-color: $color-bg;
+    padding-top: 40px;
+    .inquiry-form {
+        @include mq("tablet") {
+            width: 80%;
+        }
+    }
+    .heading__title {
+        margin-top: 35px;
+        margin-bottom: 4px;
+    }
+}
+.inquiry-form__btn--bg {
+    background: linear-gradient(180deg, #949191 40%, #bea6a6 100%) !important;
+    border: 4px solid #949191;
+
+    &:hover {
+        background: linear-gradient(
+            180deg,
+            #bea6a6 40%,
+            #949191 100%
+        ) !important;
+        border: 4px solid #949191;
+    }
+}
+
+//radio-buttom
+.custom-radio .custom-control-label::before {
+    border-radius: 0;
+}
+
+.err {
+    color: $color-red;
+}
+
+.privacy-tel {
+    text-decoration: none;
+    color: #333;
+}

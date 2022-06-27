@@ -1,0 +1,139 @@
+.voice {
+    padding: 40px 0 20px;
+
+    @include mq("tablet") {
+        padding: 46px 0 90px;
+    }
+    & .row {
+        @include mq("tablet") {
+            margin: 0 -15px;
+
+            & > [class^="col"] {
+                padding: 0 15px;
+            }
+        }
+
+        @include mq("bootstrap-lg") {
+            margin: 0 -19px;
+
+            & > [class^="col"] {
+                padding: 0 19px;
+            }
+        }
+    }
+    .col-12 {
+        margin-bottom: 15px;
+        @include mq("tablet") {
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper {
+        padding-top: 18px;
+    }
+    .voice-dtals {
+        height: 100%;
+        border: 2px solid #009cd2;
+        border-radius: 10px;
+        padding: 20px;
+
+        @include mq("phablet") {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    h3,
+    h4 {
+        text-align: center;
+        font-weight: 700;
+        color: $color-black;
+        line-height: 1.5;
+        font-size: 1.8rem;
+    }
+
+    & img {
+        width: 100%;
+    }
+}
+
+.voice-box {
+    padding: 10px;
+
+    @include mq("phablet") {
+        margin-bottom: 15px;
+    }
+
+    @include mq("tablet") {
+        margin-bottom: 0;
+    }
+
+    @include mq("bootstrap-lg") {
+        margin-bottom: 0;
+        padding: 0px;
+        width: 100%;
+    }
+
+    & p {
+        line-height: 1.5;
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        display: inline-block;
+        font-weight: 700;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 13px 15px;
+        height: 47px;
+        position: relative;
+        z-index: 1;
+        left: -10px;
+        top: -10px;
+
+        @include mq("tablet") {
+            font-size: 14px;
+            left: -10px;
+            top: -10px;
+            padding: 13px 10px;
+        }
+
+        @include mq("bootstrap-lg") {
+            font-size: 1.8rem;
+            left: -15px;
+            top: -15px;
+            padding: 13px 15px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            right: -26px;
+            top: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 48px solid $color-primary;
+            z-index: -1;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 1.8rem;
+
+        img {
+            height: 150px;
+
+            @include mq("tablet") {
+                padding-top: 15px;
+            }
+        }
+    }
+
+    &_title {
+        padding: 15px 0 0;
+        width: 100%;
+    }
+}

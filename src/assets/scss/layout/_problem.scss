@@ -1,0 +1,107 @@
+.problem {
+    padding-top: 31px;
+
+    & .container {
+        max-width: 1024px;
+        margin: 0 auto;
+
+        @include mq("desktop-lg") {
+            max-width: 1050px;
+        }
+    }
+    &__inner {
+        padding: 35px 0;
+        position: relative;
+    }
+
+    &__item {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1.7;
+        padding-bottom: 19px;
+        position: relative;
+        margin-left: 25px;
+
+        @include mq("tablet") {
+            font-size: 1.7rem;
+        }
+        @include mq("bootstrap-lg") {
+            font-size: 2rem;
+        }
+
+        & span {
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 100%;
+                background-color: #fbb03b;
+                bottom: 4px;
+                z-index: -1;
+                left: 0;
+            }
+
+            // &.txt-indent {
+            //     margin-left: 24px;
+            // }
+        }
+
+        & img {
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            @include mq("tablet") {
+                top: 10px;
+            }
+        }
+    }
+
+    &__list {
+        max-width: 830px;
+        margin: 0 auto;
+        padding-left: 0;
+
+        @include mq("bootstrap-lg") {
+            padding-left: 24px;
+        }
+    }
+
+    &-img {
+        display: none;
+
+        @include mq("tablet") {
+            display: block;
+            position: absolute;
+            right: -53px;
+            top: 65px;
+        }
+        // @include mq("desktop") {
+        //     top: 28px;
+        // }
+        @include mq("desktop-lg") {
+            display: block;
+            position: absolute;
+            left: 78%;
+            top: 28px;
+        }
+
+        & img {
+            max-width: 60%;
+
+            @include mq("bootstrap-lg") {
+                max-width: 64%;
+            }
+
+            @include mq("desktop") {
+                max-width: 82%;
+            }
+            // @include mq("desktop-lg") {
+            //     max-width: 100%;
+            // }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.food {
+    &-ctn {
+        // background: $color-accent;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        @include mq("tablet") {
+            padding-top: 37px;
+            padding-bottom: 75px;
+        }
+        &-wrapper {
+            padding-top: 48px;
+        }
+
+        &__row {
+            max-width: 830px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+            @include mq("tablet") {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &-dtals {
+        background: white;
+        // margin-bottom: 20px;
+        height: 100%;
+        text-align: center;
+    }
+
+    &-img {
+        display: inline-block;
+
+        &:hover {
+            background-color: #fff;
+            opacity: 0.8;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}

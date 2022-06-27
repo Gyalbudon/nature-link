@@ -1,0 +1,88 @@
+.header {
+    // padding: 0 15px;
+    // position: relative;
+    background-color: $color-primary;
+
+    &__tagline {
+        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 17px;
+        padding: 8px 0 14px;
+        color: $color-white;
+
+        @include mq("tablet") {
+            font-size: 1.4rem;
+            padding: 11px 0 4px;
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 10px;
+
+        @include mq("tablet") {
+            padding-bottom: 8px;
+        }
+    }
+
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        @include mq("tablet") {
+            align-items: flex-end;
+        }
+    }
+
+    &__logo {
+        width: 130px;
+
+        @include mq("tablet") {
+            width: 200px;
+        }
+
+        @include mq("bootstrap-lg") {
+            width: 206px;
+        }
+    }
+
+    &__btn-group {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 15px;
+
+        @include mq("tablet") {
+            position: absolute;
+            right: 19px;
+            top: 41px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        @include mq("desktop") {
+            top: 21px;
+            right: 0;
+            left: 79%;
+            justify-content: flex-start;
+        }
+        // @include mq("desktop-lg") {
+        //     left: 78%;
+        // }
+        // @media screen and (min-device-width: 1200px) and (max-device-width: 1290px) {
+        //     left: 49%;
+        // }
+    }
+    .container {
+        position: relative;
+        max-width: 1320px;
+        padding: 0 15px;
+        overflow: unset;
+        @include mq("desktop") {
+            padding: 0px 29px 0 25px;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+.nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: $color-white;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+    height: 0;
+
+    @include mq("tablet") {
+        display: none;
+    }
+
+    &.is-opened {
+        max-height: 1000px;
+        height: 100vh;
+    }
+
+    &__list {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid $color-primary;
+    }
+
+    &__item {
+        border-top: 1px solid $color-primary;
+
+        &:not:last-child {
+            border-bottom: 1px solid $color-primary;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-weight: 700;
+        font-size: 1.6rem;
+        padding: 15px 25px 15px 10px;
+        color: $color-black;
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-black;
+        }
+
+        &:after {
+            content: "";
+            background: url("../img/arrow-right.svg") center no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    &__btn-group {
+        padding: 15px 5px;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        @include mq("phablet") {
+            justify-content: center;
+        }
+
+        .btn-mail {
+            margin: 0;
+            padding: 9px 35px;
+            // @include mq("phablet", "max") {
+            //     margin: 10px 0 10px 5px;
+            // }
+            @include mq("phablet") {
+                padding: 7px 43px;
+            }
+
+            & img {
+                width: 28px;
+                margin-right: 12px;
+            }
+
+            &-text-top {
+                font-size: 1.2rem;
+                @include mq("phablet") {
+                    font-size: 1.5rem;
+                }
+            }
+            &-text-btm {
+                font-size: 1rem;
+                @include mq("phablet") {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .btn-phone {
+            color: $color-black;
+
+            &-top {
+                font-size: 1rem;
+
+                @include mq("phablet") {
+                    font-size: 1.3rem;
+                }
+            }
+            &-num {
+                @include mq("phablet") {
+                    font-size: 2.5rem;
+                }
+            }
+            &-btm {
+                font-size: 1.2rem;
+                @include mq("phablet") {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .cta-tag {
+            border: 1px solid $color-primary;
+
+            &__text {
+                color: $color-primary;
+            }
+
+            &::before {
+                background-color: $color-white;
+                border-top: 1px solid $color-primary;
+                border-right: 1px solid $color-primary;
+                top: 22px;
+            }
+        }
+    }
+
+    &__btn-group-top,
+    &__btn-group-btm {
+        display: flex;
+    }
+
+    &__phone-wrapper {
+        margin: 0 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-phone img {
+        width: 22px;
+        margin-right: 5px;
+    }
+
+    .btn-phone__time {
+        font-size: 1.4rem;
+        line-height: 1.1;
+    }
+}
+
+// nav-icon
+.nav-icon {
+    width: 36px;
+
+    &:before,
+    &:after,
+    > span {
+        content: "";
+        display: block;
+        background-color: $color-white;
+        display: block;
+        height: 4px;
+        margin: 6px 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &.is-opened {
+        &:before {
+            transform: translateY(10px) rotate(135deg);
+        }
+
+        &:after {
+            transform: translateY(-10px) rotate(-135deg);
+        }
+
+        & > span {
+            transform: scale(0);
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.intro {
+    background-color: $color-bg;
+    padding: 36px 0 51px;
+
+    @include mq("tablet") {
+        padding: 50px 0 64px;
+    }
+
+    &__row .-cat {
+        margin-top: 20px;
+
+        @include mq("tablet") {
+            margin-top: 0;
+        }
+    }
+
+    &__box {
+        max-width: 830px;
+        margin: 0 auto;
+        padding-top: 35px;
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 700;
+        border-bottom: 1px solid $color-primary;
+        margin-bottom: 17px;
+    }
+
+    &__head {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        color: $color-white;
+        height: 45px;
+        max-width: 184px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include mq("tablet") {
+            font-size: 1.3rem;
+        }
+        @include mq("bootstrap-lg") {
+            font-size: 1.4rem;
+        }
+
+        &.-blue {
+            background-color: #004b80;
+        }
+        &.-maroon {
+            background-color: #7b0045;
+        }
+        &.-orange {
+            background-color: #d13b00;
+        }
+        &.-purple {
+            background-color: #4f0087;
+        }
+    }
+
+    &__types {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        justify-content: center;
+
+        // @include mq("tablet") {
+        //     justify-content: flex-start;
+        // }
+    }
+
+    &__item {
+        padding: 0 15px;
+        &-title {
+            color: $color-black;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.5;
+            text-align: center;
+            letter-spacing: -0.07em;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+            @include mq("bootstrap-lg") {
+                font-size: 1.7rem;
+            }
+            @include mq("desktop") {
+                font-size: 1.7rem;
+            }
+            @include mq("desktop-lg") {
+                font-size: 1.8rem;
+            }
+        }
+        &-desc {
+            font-size: 1.4rem;
+            line-height: 1.59;
+            text-align: center;
+            padding: 9px 0 22px;
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+        }
+
+        // & .mr {
+        //     padding-left: 15px;
+        // }
+    }
+
+    &-btn {
+        text-decoration: none;
+        color: $color-white;
+        font-weight: 700;
+        background-color: #fbb03b;
+        border-radius: 25px;
+        display: flex;
+        width: 155px;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 0;
+        transition: all 0.2s ease-in;
+
+        @include mq("tablet") {
+            width: 165px;
+            padding: 15px 0;
+        }
+        @include mq("desktop") {
+            width: 178px;
+            padding: 15px 0;
+        }
+
+        &:hover {
+            background-color: #d2860f;
+        }
+    }
+}

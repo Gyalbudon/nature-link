@@ -1,0 +1,160 @@
+.about {
+    background-color: $color-bg;
+    padding: 48px 0 31px;
+
+    @include mq("tablet") {
+        padding: 80px 0 75px;
+    }
+
+    &__inner {
+        max-width: 830px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    &__box {
+        padding-left: 0;
+
+        @include mq("tablet") {
+            padding-left: 22px;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $color-primary;
+        font-weight: 700;
+        border-bottom: 1px solid $color-primary;
+        padding-bottom: 2px;
+
+        @include mq("tablet") {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__head {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $color-black;
+        font-weight: 700;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 2px;
+
+        @include mq("tablet") {
+            font-size: 1.8rem;
+        }
+
+        &-sub {
+            font-weight: 700;
+            font-size: 1.6rem;
+            padding-bottom: 5px;
+
+            @include mq("tablet") {
+                font-size: 1.8rem;
+            }
+        }
+
+        &.-payment {
+            padding-top: 30px;
+        }
+        &.-delivery {
+            padding-top: 25px;
+        }
+        &.-md {
+            padding-top: 40px;
+        }
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: $color-black-1;
+        padding-top: 12px;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__details {
+        line-height: 1.5;
+        padding-top: 12px;
+        padding-bottom: 22px;
+        font-size: 1.4rem;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+
+        &.-return {
+            padding-bottom: 13px;
+            padding-top: 20px;
+        }
+        &.-delivery {
+            padding-bottom: 15px;
+        }
+        &.-mt {
+            padding-top: 38px;
+        }
+    }
+
+    &__method {
+        background-color: $color-white;
+        color: $color-black;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+
+        &.-mt {
+            margin-top: 10px;
+
+            @include mq("phablet") {
+                margin-top: 0;
+            }
+        }
+
+        &-detail {
+            font-size: 1.4rem;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    & .row {
+        margin: 0 -5px 0;
+        // justify-content: center;
+
+        & > [class^="col"] {
+            padding: 0 5px;
+        }
+    }
+    & .delivery__row {
+        display: flex;
+        flex-direction: row;
+        padding-top: 12px;
+        align-items: center;
+        &.-mt {
+            padding-top: 25px;
+        }
+    }
+
+    & .delivery__col {
+        display: flex;
+    }
+
+    &__return {
+        padding-top: 50px;
+    }
+    &__payment {
+        padding-bottom: 53px;
+    }
+}

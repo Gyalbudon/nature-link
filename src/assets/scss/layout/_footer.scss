@@ -1,0 +1,67 @@
+.footer {
+    background: $color-primary;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 65px;
+
+    @include mq("phone-wide") {
+        margin-bottom: 75px;
+    }
+
+    @include mq("phablet") {
+        margin-bottom: 0;
+    }
+
+    &__top {
+        background-color: #f2f2f2;
+        color: $color-white;
+        padding: 30px 15px 15px;
+
+        @include mq("tablet") {
+            padding: 35px 25px;
+        }
+    }
+
+    &__address {
+        line-height: 1;
+        text-align: center;
+        margin-top: 20px;
+        color: $color-black;
+
+        p {
+            // margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 700;
+                // margin-bottom: 35px;
+                display: block;
+            }
+        }
+    }
+
+    &__logo {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    &__copyright {
+        padding: 20px 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+}

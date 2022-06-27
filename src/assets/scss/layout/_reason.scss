@@ -1,0 +1,135 @@
+//SECTION PROBLEM
+.reason {
+    background: $color-bg;
+    padding-top: 10px;
+
+    @include mq("tablet") {
+        padding-top: 30px;
+    }
+    &__wrapper {
+        margin-top: 20px;
+
+        @include mq("phablet") {
+            margin-top: 35px;
+        }
+    }
+
+    // &__row {
+
+    // }
+
+    &__row {
+        padding-bottom: 16px;
+
+        @include mq("phablet") {
+            margin: 0 -7px 0;
+
+            & > [class^="col"] {
+                padding: 0 7px;
+            }
+        }
+        @include mq("tablet") {
+            margin: 0 -13px 0;
+
+            & > [class^="col"] {
+                padding: 0 13px;
+            }
+        }
+    }
+    &.section-inner {
+        max-width: 1023px;
+        margin: 0 auto;
+    }
+}
+
+// reason card
+.reason-card {
+    margin-bottom: 40px;
+    padding-top: 8px;
+
+    // @include mq("tablet") {
+    //     margin-bottom: 0;
+    //     padding-top:0;
+    // }
+
+    &__header {
+        text-align: center;
+        position: relative;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        width: 70%;
+
+        @include mq("phablet") {
+            width: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $color-primary;
+        color: $color-white;
+        font-size: 1.8rem;
+        font-weight: 900;
+        width: 31px;
+        height: 31px;
+        line-height: 31px;
+        text-align: center;
+    }
+
+    &__body {
+        padding: 0 10px;
+
+        @include mq("phablet") {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: $color-black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.02em;
+        // padding: 10px 0 14px;
+        height: 83px;
+        &.-spacing {
+            letter-spacing: -0.08em;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+
+        @include mq("phablet") {
+            font-size: 1.7rem;
+        }
+        @include mq("tablet") {
+            font-size: 1.8rem;
+        }
+
+        @include mq("bootstrap-lg") {
+            font-size: 1.7rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
+        font-weight: 400;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+            text-align: justify;
+        }
+    }
+}
